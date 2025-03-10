@@ -12,11 +12,27 @@ export default function CourseGoal({
 }: 
     CourseGoalProps
 ) {
-    return <article>
-        <div>
-            <h2>{title}</h2>
-            <p>{children}</p>
-        </div>
-        <button>Delete</button>
-    </article>
+    return (
+        <article>
+            <div>
+                <h2>{title}</h2>
+                <p>{children}</p>
+            </div>
+            <button>Delete</button>
+        </article>
+    ) 
 }
+
+// const CourseGoal: FC<CourseGoalProps> = ({title, children}) => {
+//     return (
+//         <article>
+//             <div>
+//                 <h2>{title}</h2>
+//                 <p>{children}</p>
+//             </div>
+//             <button>Delete</button>
+//         </article>
+//     )
+// }
+
+// export default CourseGoal

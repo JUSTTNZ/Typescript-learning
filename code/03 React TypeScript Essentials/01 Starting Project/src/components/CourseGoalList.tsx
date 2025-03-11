@@ -1,22 +1,16 @@
-type CourseGoalList = {
-  goals:  {
-    title: string;
-    description: string;
-    id: number;
-  }[]
-}
-
 import CourseGoal from './CourseGoal';
-export default function CourseGoalList ({goals}: CourseGoalList) {
-    
-  
+import { type CourseGoal as CGoal } from  '../App'
+type CourseGoalListProps = {
+  goals:  CGoal[];
+  onDeleteGoal: (id: number) => void;
+}
+export default function CourseGoalList ({goals, onDeleteGoal}: CourseGoalListProps) {
     return (
         <div>
-            
             <ul>
                 {goals.map((goal) => (
                 <li key={goal.id}>
-                    <CourseGoal title={goal.title}>
+                    <CourseGoal id={goal.id} title={goal.title} onDelete={onDeleteGoal}>
                         <p>{goal.description}</p>
                     </CourseGoal>
                 </li>

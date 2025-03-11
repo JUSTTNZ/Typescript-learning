@@ -3,6 +3,7 @@ import goalsImg from './assets/goals.jpg'
 import CourseGoal from "./components/CourseGoal";
 import CourseGoalList from './components/CourseGoalList';
 import Header from "./components/Header";
+import NewGoal from './components/NewGoal';
 
 export type CourseGoal = {
   title: string;
@@ -31,7 +32,7 @@ export default function App() {
       <Header image={{src: goalsImg, alt: 'A list of goals'}}>
           <h1>Your course Goals</h1>
       </Header>
-      <button onClick={handleAddGoal}>Add Goal</button>
+      <NewGoal />
       <CourseGoalList goals={goals} onDeleteGoal={handleDeleteGoal}/>
 
       

@@ -24,7 +24,6 @@ export default function CourseGoalList ({goals, onDeleteGoal}: CourseGoalListPro
     }
     return (
         <>
-        ...
             <div>
             <ul>
                 {goals.map((goal) => (

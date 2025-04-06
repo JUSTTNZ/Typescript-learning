@@ -5,7 +5,7 @@ userName = 'Max';
 
 let userAge = 34;
 
-let isValid = true;
+
 
 // string, number, boolean
 
